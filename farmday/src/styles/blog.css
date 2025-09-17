@@ -1,0 +1,106 @@
+.blogs {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #1a1f32;
+}
+
+.blogs h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #067d42;
+}
+
+.slider {
+    position: relative;
+    width: 70%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.blog-slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.blog-card {
+    flex: 0 0 100%;
+    padding: 15px;
+    background-color: #86868976;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 40px 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 25px 50px rgba(26, 111, 42, 0.805);
+}
+
+.blog-card h3 {
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.blog-card img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.blog-card:hover img {
+    transform: scale(1.05);
+}
+
+/* === Slider Buttons (Merged and Responsive) === */
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.slider button:hover {
+    background-color: #27ae60;
+}
+
+.slider .prev {
+    left: 10px;
+}
+
+.slider .next {
+    right: 10px;
+}
+
+/* === Responsive Fixes === */
+@media (max-width: 768px) {
+    .blog-card {
+        flex: 0 0 100%;
+    }
+
+    .slider {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .slider button {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+    }
+}
