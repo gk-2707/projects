@@ -1,0 +1,79 @@
+/* Features Section */
+#features {
+    background-color: #1a1f32;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Section Heading */
+#features h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 80px;
+}
+
+/* Card Grid Container */
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+/* Individual Feature Card */
+.feature-card {
+    background-color: rgba(134, 134, 137, 0.46);
+    width: 300px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(26, 111, 42, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Feature Image */
+.feature-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+/* Feature Title */
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+/* Feature Description */
+.feature-card p {
+    color: #27ae60;
+    text-align: justify;
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-slide-up {
+    animation: fadeSlideUp 0.8s ease-in-out forwards;
+    opacity: 0;
+}
